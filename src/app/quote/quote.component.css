@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css?family=Carter+One|Chewy|Righteous&display=swap');
 h1{
     font-family: 'Carter One', cursive;
-    color:orange;
+    color: aqua;
+    display: flex;
+    justify-content: center;
 }
 p{
    font-size: 20px;
