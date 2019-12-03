@@ -30,9 +30,9 @@
             <label for="dDay">Date</label>
             <input type='date' id="complete" class="form-control" [(ngModel)]="newQuote.myDate" name="myDte" #myDate='ngModel' required>
             <p [hidden]="myDate.valid || myDate.pristine" class="alert alert-danger">
-                    <small>Pick date</small></p>
+                    <small>Pick date:</small></p>
         </div>
-        <button type="submit" class="btn btn-success m-3 btn-lg">Submit Quote</button>
+        <button type="submit" class="btn btn-success m-3 btn-lg">Submit Quote:</button>
     </form>
     </div>
   </div>
