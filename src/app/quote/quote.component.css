@@ -6,10 +6,10 @@ h1{
     color: blue;
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 25px;
 }
 p{
-   font-size: 30px;
+   font-size: 25px;
     font-family: 'Chewy', cursive;
     
 }
