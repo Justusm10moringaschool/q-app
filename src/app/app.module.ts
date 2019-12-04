@@ -9,22 +9,20 @@ import { QuoteComponent } from './quote/quote.component';
 import { HighlighteQuoteDirective } from './highlighte-quote.directive';
 import { TimeCountPipe } from './time-count.pipe';
 import { FormComponent } from './form/form.component';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    QuoteDetailsComponent,
-    QuoteComponent,
-    HighlighteQuoteDirective,
-    TimeCountPipe,
-    FormComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		QuoteDetailsComponent,
+		QuoteComponent,
+		HighlighteQuoteDirective,
+		TimeCountPipe,
+		FormComponent,
+		TimeAgoPipe
+	],
+	imports: [ BrowserModule, AppRoutingModule, FormsModule ],
+	providers: [],
+	bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {}
