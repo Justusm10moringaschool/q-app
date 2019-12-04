@@ -1,8 +1,8 @@
-import { TimeCountPipe } from './time-count.pipe';
+import { HighlighteQuoteDirective } from './highlighte-quote.directive';
 
-describe('TimeCountPipe', () => {
-  it('create an instance', () => {
-    const pipe = new TimeCountPipe();
-    expect(pipe).toBeTruthy();
+describe('HighlighteQuoteDirective', () => {
+  it('should create an instance', () => {
+    const directive = new HighlighteQuoteDirective();
+    expect(directive).toBeTruthy();
   });
 });

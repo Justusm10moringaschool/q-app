@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Quotes": {
+    "quoteproject": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Quotes",
+            "outputPath": "dist/quoteproject",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Quotes:build"
+            "browserTarget": "quoteproject:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Quotes:build:production"
+              "browserTarget": "quoteproject:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Quotes:build"
+            "browserTarget": "quoteproject:build"
           }
         },
         "test": {
@@ -111,20 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Quotes:serve"
+            "devServerTarget": "quoteproject:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Quotes:serve:production"
+              "devServerTarget": "quoteproject:serve:production"
             }
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {}
         }
       }
-    }
-  },
-  "defaultProject": "Quotes"
+    }},
+  "defaultProject": "quoteproject"
 }

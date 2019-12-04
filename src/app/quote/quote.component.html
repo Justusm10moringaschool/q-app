@@ -1,25 +1,26 @@
+
 <div class="container">
-  <h1> Quotes App</h1>
-  <p>This app allows you to get quotes from different people around the world.</p>
-  <div class="row">
-    <div class="col-md-6">
-      <div *ngFor='let quote of quotes, let i = index'>
-        <div>
-        <p appHighlighteQuote *ngIf="loopVote()===quote.upvote && quote.upvote>0"><i class="fa fa-quote-left fa-2x text-dark mr-3"></i> {{quote.quote}} </p>
-        <p *ngIf="loopVote()!==quote.upvote || quote.upvote===0"><i class="fa fa-quote-left fa-2x text-dark mr-3"></i>{{quote.quote}}
-        </p>
-         
-        </div>
-        
-        <div>
-          <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)' (isUp)='addTotal($event,i)' (isDown)='adTotal($event,i)'></app-quote-details>
-          <hr class="w-75">
+    <h1> Quotes App</h1>
+    <p>This app allows you to get quotes from different people around the world.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor='let quote of quotes, let i = index'>
+          <div>
+          <p appHighlighteQuote *ngIf="loopVote()===quote.upvote && quote.upvote>0"><i class="fa fa-quote-left fa-2x text-dark mr-3"></i> {{quote.quote}} </p>
+          <p *ngIf="loopVote()!==quote.upvote || quote.upvote===0"><i class="fa fa-quote-left fa-2x text-dark mr-3"></i>{{quote.quote}}
+          </p>
+           
           </div>
+          
+          <div>
+            <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)' (isUp)='addTotal($event,i)' (isDown)='adTotal($event,i)'></app-quote-details>
+            <hr class="w-75">
+            </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+          <app-form (addQuote)= "addNewQuote($event)"></app-form>
       </div>
     </div>
-    
-    <div class="col-md-6">
-        <app-form (addQuote)= "addNewQuote($event)"></app-form>
-    </div>
   </div>
-</div>
